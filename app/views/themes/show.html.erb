@@ -1,19 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @theme.title %>
-</p>
+<div class="title">
+  <span></span>
+  <h2><%= @theme.title %></h2>
+  <span></span>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @theme.description %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @theme.image %>
-</p>
+<p class="description"><%= @theme.description %></p>
 
 <%= link_to 'Edit', edit_theme_path(@theme) %> |
 <%= link_to 'Back', themes_path %>
