@@ -1,0 +1,21 @@
+<div>
+
+    <div class="grid-box">
+
+        <% @themes.each do |theme| %>
+        
+            <div>
+                <%= image_tag theme.image %>    
+                <h2><%= theme.title %></h2>
+                <%= link_to '<button class="black">VOIR</button>'.html_safe, theme %>
+                
+            </div>
+
+        <% end %>
+
+  
+        
+    </div>
+
+
+</div>
