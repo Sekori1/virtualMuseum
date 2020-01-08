@@ -4,12 +4,13 @@ class ThemesController < ApplicationController
   # GET /themes
   # GET /themes.json
   def index
-    @themes = Theme.all
+    @themes = Theme.includes(:arts).all
   end
 
   # GET /themes/1
   # GET /themes/1.json
   def show
+
   end
 
   # GET /themes/new

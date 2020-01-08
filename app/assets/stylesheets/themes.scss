@@ -27,7 +27,7 @@
     }
 }
 
-.title {
+.theme-title {
     margin: 40px 0;
     width: 100%;
     display: flex;
@@ -44,6 +44,49 @@
         flex: 1;
         background-color: #707070;
     }
+}
 
+.theme-description {
+    max-width: 800px;
+    font-size: 1.5em;
+    margin: 40px auto;
+}
 
+.art {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    .image img{
+        width: 100%;
+        object-fit: cover;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+
+    .description {
+
+        text-align: center;
+
+        h2 {
+            font-size: 5em;
+            margin: 5px 0;
+        }
+
+        p.date {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        p.desc {
+            margin: 40px 0;
+        }
+
+        button {
+            width: 180px;
+            height: 60px;
+            font-size: 1.5em;
+        }
+
+    }
 }

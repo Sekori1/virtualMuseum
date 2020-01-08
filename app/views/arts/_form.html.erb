@@ -36,6 +36,11 @@
     <%= form.text_area :images %>
   </div>
 
+  <div class="field">
+    <%= form.label :theme_id %>
+    <%= form.select :theme_id, [['Theme 1', 1], ['Theme 2', 2], ['Theme 3', 3]] %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
