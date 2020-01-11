@@ -1,30 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<div class="theme-title">
-  <span></span>
-  <h2><%= @theme.title %></h2>
-  <span></span>
+<div class="element page-title">
+    <span></span>
+    <h2 class="text title"><%= @theme.title %></h2>
+    <span></span>
 </div>
 
-<p class="theme-description"><%= @theme.description %></p>
+
+<div class="container">
 
 
-<% @theme.arts.each do |art| %>
-
-  <div class="art">
-    <div class="image"> 
-      <%= image_tag art.images %>   
-    </div>
-    <div class="description">
-      <h2><%= art.title %></h2>
-      <p class="date"><%= art.date %></p>
-      <p class="desc"><%= art.description %></p>
-      <button class="black">AUTEUR</button>
-    </div>
+  <div class="row is-centered ">
+    <p class="col-10 col-sm-8 theme-description">
+      <%= @theme.description %>
+    </p>
   </div>
+  
+  <% @theme.arts.each do |art| %>
 
-<% end %>
+    <div class="art row align-items-center">
+      <div class="image-box col-12 col-md-8 col-lg-6"> 
+          <%= image_tag art.images %>   
+      </div>
+      <div class="desc-box column col-6">
+        <h2 class="art-title text bigtitle-text"><%= art.title %></h2>
+        <p class="art-date text title-text"><%= art.date %></p>
+        <p class="art-desc text info-text"><%= art.description %></p>
+          <% if art.author %>
+            <%= link_to (art.author.firstname + " " + art.author.lastname) , author_path(art.author) , class: "button black-button" %>
+          <% else %>
+            <a class="button black-button">Auteur inconnu</a>
+          <% end %>
+          
+      </div>
+    </div>
+  <% end %>
+    
+</div>
 
-
-<%= link_to 'Edit', edit_theme_path(@theme) %> |
-<%= link_to 'Back', themes_path %>
+<footer> 
+    <%= link_to 'RETOUR'.html_safe , themes_path, class: "btn white-btn"%>
+</footer>

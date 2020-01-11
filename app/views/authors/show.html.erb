@@ -1,4 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="element page-title">
+    <span></span>
+    <h2 class="text title"><%= @author.firstname + " " + @author.lastname %></h2>
+    <span></span>
+</div>
+
+<div class="container content-box">
+  <div class="row">
+    <div class="col-md-3 offset-md-1 author-box ">
+      <div class="image-box">
+        <%= image_tag @author.portraitURL %> 
+      </div>
+      <div class="birth-box">
+        <p class="text-info place-text"></p>
+        <div class="black-box date-box">
+          <p class="text subtitle-text"><%= @author.birthdate.year.to_s + " - " + @author.deathdate.year.to_s %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 offset-md-1 arts-box">
+      <div class="title-box">
+        <h2 class="text bigtitle-text">REALISATION</h2>
+        <p class="text subtitle-text available-art"><%= @author.arts.count.to_s + " Oeuvres disponible" %></p>
+      </div>
+      <div class="art-items-box row">
+        <% @author.arts.each do |art| %>
+            <div class="art-item image-box col-md-4">
+              <img src="<%= art.images %>">
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <p>
   <strong>Firstname:</strong>
