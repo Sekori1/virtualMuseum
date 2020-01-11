@@ -1,0 +1,25 @@
+@import "../_coolors";
+
+.element.page-title {
+
+ 	width: 100%;
+	display: flex;
+	align-items: center;
+
+	.title {
+	    flex-shrink: 0;
+	    font-size: 5em;
+	    margin: 0 20px;
+
+		a {
+		    color: black;
+		 
+	  	}
+	}
+
+	span {
+	    height: 3px;
+	    flex: 1;
+	    background-color: #707070;
+	}
+}

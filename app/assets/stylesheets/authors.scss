@@ -1,3 +1,30 @@
 // Place all the styles related to the Authors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.content-box {
+
+    padding: 60px 0;
+
+    .arts-box {
+        text-align: center;
+    
+        .title-box {
+            margin: 0 auto;
+        }
+    }
+    
+    .author-box {
+        text-align: center;
+    
+        .image-box {
+            height: 300px;
+        }
+
+        .date-box {
+            width: 70%;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+    }
+}

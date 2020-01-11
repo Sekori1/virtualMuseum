@@ -1,90 +1,68 @@
 // Place all the styles related to the themes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.grid-box {
-    display: flex;
-    flex-wrap: nowrap;
+.theme-item {
+    margin: 20px 0;
 
     & > * {
-        width: calc( (100/3)* 1%);
-        flex-shrink: 0;
         text-align: center;
-
         padding: 10px;
         box-sizing: border-box;
-
-        img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-        }
-
-        button {
-            width: 150px;
-            height: 40px;
-            margin: 0 auto;
-        }
-    }
-}
-
-.theme-title {
-    margin: 40px 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-    h2 {
-        flex-shrink: 0;
-        font-size: 5em;
-        margin: 0 20px;
     }
 
-    span {
-        height: 5px;
-        flex: 1;
-        background-color: #707070;
+    .theme-title {
+        margin: 0!important;
+    }
+
+    img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+    
+    .button {
+        display: block;
+        width: 150px;
+        height: 40px;
+        margin: 0 auto;
     }
 }
 
 .theme-description {
-    max-width: 800px;
     font-size: 1.5em;
-    margin: 40px auto;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .art {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-
-    .image img{
-        width: 100%;
-        object-fit: cover;
-        padding: 40px;
+    img {
+        padding-top: 25px;
         box-sizing: border-box;
+        width: 100%;
     }
 
-    .description {
+    .desc-box {
 
         text-align: center;
+        padding: 20px;
 
-        h2 {
-            font-size: 5em;
+        .art-title {
             margin: 5px 0;
         }
 
-        p.date {
+        .art-date {
             font-size: 1.5em;
             margin: 0;
         }
 
-        p.desc {
+        .art-desc {
+            font-size: 1.2em;
             margin: 40px 0;
         }
 
-        button {
-            width: 180px;
-            height: 60px;
+        .btn {
+            padding: 15px 0;
+            width: 200px;
             font-size: 1.5em;
         }
 
