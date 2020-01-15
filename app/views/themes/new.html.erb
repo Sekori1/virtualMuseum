@@ -1,5 +1,13 @@
-<h1>New Theme</h1>
+<div class="element page-title">
+    <span></span>
+    <h2 class="text title">Nouveau theme</h2>
+    <span></span>
+</div>
 
-<%= render 'form', theme: @theme %>
+<div class="container">
+    <%= render 'form', theme: @theme %>
+</div>
 
-<%= link_to 'Back', themes_path %>
+<footer> 
+    <%= link_to 'RETOUR'.html_safe , root_path, class: "button white-button"%>
+</footer>

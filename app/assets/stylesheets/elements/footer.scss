@@ -2,18 +2,15 @@
 
 footer {
     position: relative;
-    margin-top: 150px;
-    height: 250px;
+    margin-top: 100px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $black;
 
-    .btn {
-        position: absolute;
+    .button {
         padding: 17px 0;
         width: 200px;
-        left: 0;
-        right: 0;
-        bottom: 40px;
-        margin: 0 auto;
-
     }
 }

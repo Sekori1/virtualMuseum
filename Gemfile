@@ -33,7 +33,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap', '~> 4.4.1'
-
 gem 'simple_form'
 
 group :development, :test do

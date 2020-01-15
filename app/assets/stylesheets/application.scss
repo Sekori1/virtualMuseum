@@ -16,15 +16,10 @@
 @import 'bootstrap';
 @import "_coolors";
 
-@import "./elements/menu.scss";
-@import "./elements/footer.scss";
-@import "./elements/page-title.scss";
-
  body {
   background-color: $light;
   color: $dark;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
   margin: 0;
 
   display: flex;
@@ -57,19 +52,6 @@
 	margin: 0;
 	line-height: 1em;
 
-	&.bigtitle-text {
-		font-size: 3.2em;
-		font-weight: 700;
-	}
-
-	&.title-text {
-		font-size: 2em;
-	}
-	
-	&.subtitle-text {
-		font-size: 1.4em;
-	}
-
 	&.black-text {
 		color: $black;
 	}
@@ -100,4 +82,20 @@
 	  color: black;
 	}
 	
-  }
+}
+
+.edit-box {
+    text-align: center;
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+
+@import "./elements/menu.scss";
+@import "./elements/footer.scss";
+@import "./elements/page-title.scss";
+
+
+  

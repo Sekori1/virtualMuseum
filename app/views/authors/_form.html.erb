@@ -1,52 +1,9 @@
-<%= form_with(model: author, local: true) do |form| %>
-  <% if author.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(author.errors.count, "error") %> prohibited this author from being saved:</h2>
+<%= simple_form_for @author do |f| %>
+  <%= f.input :firstname %>
+  <%= f.input :lastname %>
+  <%= f.input :birthdate %>
+  <%= f.input :deathdate %>
+  <%= f.input :portraitURL %>
 
-      <ul>
-      <% author.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :firstname %>
-    <%= form.text_field :firstname %>
-  </div>
-
-  <div class="field">
-    <%= form.label :lastname %>
-    <%= form.text_field :lastname %>
-  </div>
-
-  <div class="field">
-    <%= form.label :birthdate %>
-    <%= form.date_select :birthdate %>
-  </div>
-
-  <div class="field">
-    <%= form.label :deathdate %>
-    <%= form.date_select :deathdate %>
-  </div>
-
-  <div class="field">
-    <%= form.label :birthplace %>
-    <%= form.text_field :birthplace %>
-  </div>
-
-  <div class="field">
-    <%= form.label :deathplace %>
-    <%= form.text_field :deathplace %>
-  </div>
-
-  <div class="field">
-    <%= form.label :portraitURL %>
-    <%= form.text_field :portraitURL %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= f.button :submit, class:"button black-button" %>
 <% end %>

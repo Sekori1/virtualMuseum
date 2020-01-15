@@ -1,3 +1,25 @@
 // Place all the styles related to the Arts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.content-box {
+    position: relative;
+    text-align: center;
+    font-size: 1.3em;
+
+    * {
+        margin: 0;
+    }
+    
+
+    .image-box {
+        margin: 15px 0;
+        width: 100%!important;
+    }
+
+    .art-desc {
+        margin: 10px 0;
+    }
+
+}

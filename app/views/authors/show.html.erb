@@ -3,6 +3,10 @@
     <h2 class="text title"><%= @author.firstname + " " + @author.lastname %></h2>
     <span></span>
 </div>
+<div class="edit-box">
+  <%= link_to 'Modifier', edit_author_path(@author), class:"edit-button"%>
+</div>
+
 
 <div class="container content-box">
   <div class="row">
@@ -13,7 +17,7 @@
       <div class="birth-box">
         <p class="text-info place-text"></p>
         <div class="black-box date-box">
-          <p class="text subtitle-text"><%= @author.birthdate.year.to_s + " - " + @author.deathdate.year.to_s %></p>
+          <p class="text subtitle-text"><%= @author.birthdate.to_s + " - " + @author.deathdate.to_s %></p>
         </div>
       </div>
     </div>
@@ -24,8 +28,10 @@
       </div>
       <div class="art-items-box row">
         <% @author.arts.each do |art| %>
-            <div class="art-item image-box col-md-4">
-              <img src="<%= art.images %>">
+            <div class="art-item image-box col-lg-4 col-md-6 ">
+              <%= link_to art_path(art) do %>
+                <%= image_tag art.images %>
+              <% end %>
             </div>
         <% end %>
       </div>
@@ -33,40 +39,8 @@
   </div>
 </div>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @author.firstname %>
-</p>
+<footer> 
+    <%= link_to 'RETOUR'.html_safe , theme_path, class: "button white-button"%>
+</footer>
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @author.lastname %>
-</p>
 
-<p>
-  <strong>Birthdate:</strong>
-  <%= @author.birthdate %>
-</p>
-
-<p>
-  <strong>Deathdate:</strong>
-  <%= @author.deathdate %>
-</p>
-
-<p>
-  <strong>Birthplace:</strong>
-  <%= @author.birthplace %>
-</p>
-
-<p>
-  <strong>Deathplace:</strong>
-  <%= @author.deathplace %>
-</p>
-
-<p>
-  <strong>Portraiturl:</strong>
-  <%= @author.portraitURL %>
-</p>
-
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>

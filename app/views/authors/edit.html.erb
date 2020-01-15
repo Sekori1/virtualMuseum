@@ -1,6 +1,13 @@
-<h1>Editing Author</h1>
+<div class="element page-title">
+    <span></span>
+    <h2 class="text title">Modifier un auteur</h2>
+    <span></span>
+</div>
 
-<%= render 'form', author: @author %>
+<div class="container">
+    <%= render 'form', theme: @author %>
+</div>
 
-<%= link_to 'Show', @author %> |
-<%= link_to 'Back', authors_path %>
+<footer> 
+    <%= link_to 'RETOUR'.html_safe , root_path, class: "button white-button"%>
+</footer>

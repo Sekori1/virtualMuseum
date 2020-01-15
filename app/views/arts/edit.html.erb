@@ -1,6 +1,13 @@
-<h1>Editing Art</h1>
+<div class="element page-title">
+    <span></span>
+    <h2 class="text title">Editer l'oeuvre</h2>
+    <span></span>
+</div>
 
-<%= render 'form', art: @art %>
+<div class="container">
+    <%= render 'form', theme: @art %>
+</div>
 
-<%= link_to 'Show', @art %> |
-<%= link_to 'Back', arts_path %>
+<footer> 
+    <%= link_to 'RETOUR'.html_safe , root_path, class: "button white-button"%>
+</footer>

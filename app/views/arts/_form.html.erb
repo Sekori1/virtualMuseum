@@ -4,60 +4,10 @@
   <%= f.input :date %>
 
   <%= f.input :images %>
-  <%= f.button :submit %>
-
 
   <%= f.association :author %>
   <%= f.association :theme %>
+
+
+  <%= f.button :submit, class:"black-button button" %>
 <% end %>
-
-<!--
-<%= form_with(model: art, local: true) do |form| %>
-  <% if art.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(art.errors.count, "error") %> prohibited this art from being saved:</h2>
-
-      <ul>
-      <% art.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.text_field :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :author_id %>
-    <%= form.select :author_id, [['Auteur 1', 1], ['Auteur 2', 2], ['Auteur 3', 3]]  %>
-  </div>
-
-  <div class="field">
-    <%= form.label :images %>
-    <%= form.text_area :images %>
-  </div>
-
-  <div class="field">
-    <%= form.label :theme_id %>
-    <%= form.select :theme_id, [['Theme 1', 1], ['Theme 2', 2], ['Theme 3', 3]] %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
--->
