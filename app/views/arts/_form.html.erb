@@ -6,6 +6,7 @@
   <%= f.input :images %>
 
   <%= f.association :author, required: false %>
+  <p>Vous ne trouvez pas votre auteur, <%= link_to "Ajoutez le", new_author_path %></p>
   <%= f.association :theme %>
 
 

@@ -17,25 +17,33 @@
   </div>
   
   <div class="row">
-  <% @theme.arts.each do |art| %>
+    <% @theme.arts.each do |art| %>
 
-    <div class="art col-md-4 align-middle">
+      <div class="art col-md-4 align-middle">
+        
+        <%= link_to art_path(art) do %>
+        <div class="image-box"> 
+            <%= image_tag art.images %>   
+        </div>
+        <% end %>
+        <h2 class="art-title"><%= art.title %></h2>
       
-      <%= link_to art_path(art) do %>
-      <div class="image-box"> 
-          <%= image_tag art.images %>   
+        <% if art.author %>
+          <p class="art-author">par <%= link_to ( art.author.firstname + " " + art.author.lastname) , author_path(art.author)  %></p>
+        <% end %>
+        <p class="art-date"><%= art.date %></p>
       </div>
+    <% end %>
+
+    <div class="col-md-4 col-sm-6 theme-create-item">
+      <%= link_to new_art_path do%>
+        <div class="black-box">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"/></g></g></svg>
+          <p>Ajouter une oeuvre</p>
+        </div>
       <% end %>
-      <h2 class="art-title"><%= art.title %></h2>
-     
-      <% if art.author %>
-        <p class="art-author">par <%= link_to ( art.author.firstname + " " + art.author.lastname) , author_path(art.author)  %></p>
-      <% end %>
-      <p class="art-date"><%= art.date %></p>
     </div>
-  <% end %>
-  </div>
-    
+  </div>  
 </div>
 
 <footer> 

@@ -99,3 +99,39 @@
 
 
   
+
+.theme-create-item {
+    padding: 20px;
+
+    & .black-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        width: 100%;
+
+        &:hover svg{
+            
+            height: 100px;
+            width: 100px;
+        }
+
+        svg {
+            height: 80px;
+            width: 80px;
+            transition-duration: 0.2s;
+
+            path {
+                fill: white;
+            }
+        }
+
+        p {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+        }
+    }
+
+}
